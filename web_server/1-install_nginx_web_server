@@ -6,7 +6,7 @@ apt-get update -y
 apt-get install -y nginx
 
 # Overwrite the default file used by Nginx sandbox config
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
+echo "Holberton School for the win!" > /var/www/html/index.html
 
 # Restart Nginx using service (no systemctl allowed)
 service nginx restart
