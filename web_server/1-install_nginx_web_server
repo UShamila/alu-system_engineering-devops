@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# This script installs and configures Nginx on an Ubuntu server
+# Installs and configures Nginx in Holberton sandbox
 
-# Update package list and install nginx
+# Update and install nginx
 apt-get update -y
 apt-get install -y nginx
 
-# Overwrite the actual default index.html served by Nginx
-echo "Holberton School" > /var/www/html/index.html
+# Overwrite the default file used by Nginx sandbox config
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
 
-# Restart nginx using service
+# Restart Nginx using service (no systemctl allowed)
 service nginx restart
