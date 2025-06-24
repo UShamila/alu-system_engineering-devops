@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script to install Nginx and serve a custom HTML page
+
+# Install Nginx
+apt-get update -y
+apt-get install nginx -y
+
+# Create a simple HTML file with the required content
+echo 'Holberton School for the win!' > /var/www/html/index.html
+
+# Restart Nginx using service command (since systemctl is not allowed)
+service nginx restart
